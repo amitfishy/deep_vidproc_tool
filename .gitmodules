@@ -1,0 +1,4 @@
+[submodule "deep_objdetect"]
+	path = deep_objdetect
+	url = https://github.com/amitfishy/deep_objdetect
+	branch = master
