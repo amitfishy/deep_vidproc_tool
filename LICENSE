@@ -1,6 +1,13 @@
 MIT License
 
+This code uses forks of the following repos as submodules:
+https://github.com/amitfishy/deep_objdetect
+https://github.com/rbgirshick/py-faster-rcnn
+https://github.com/pjreddie/darknet
+
 Copyright (c) 2018 Amit Sinha
+SSP Lab, ECE Department
+Indian Institute of Science, Bangalore
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

@@ -1,2 +1,10 @@
 # deep_vidproc_tool
+
 A tool for video processing using deep learning based object detection and some simple algorithms.
+Currently there are 2 portions to this tool. All the configurations are provided in `video_proc_params.ini`.
+
+First a folder containing video files is to be provided in the `[data]` section. The results are given in the `output_directory` in the same structure as the `input_directory`.
+
+The `[VideoObjectDetection]` section is used to generate video files with bounding boxes which can be used for visualizations. The `interval` indicated here is the time in seconds at which each video slice is taken (interval = 1/fps). The object detection algorithm can be chosen as `faster_rcnn` or `yolo`, whose config file should be provided. The details for the config file should be provided following the object detection repository's `online detection` code [as follows](https://github.com/amitfishy/deep_objdetect/blob/master/help/docs/GETTING_STARTED.md).
+
+The `[ExtractImagesVideo]` takes the video files and saves it as a bunch of images whose format can be indicated in `image_format`. The `interval` is given in the same way as mentioned for `[VideoObjectDetection]`. In this, parsing is done based on intervals of time. An additional filter may be added based on object detection. Set `use_objdet` to `True` if this is desired and again choose the algorithm as `faster_rcnn` or `yolo`, whose config file should be provided. The details for the config file should be provided following the object detection repository's `online detection` code [as follows](https://github.com/amitfishy/deep_objdetect/blob/master/help/docs/GETTING_STARTED.md). The `num_objects_thresh` will check if enough objects are detected to consider an image containing objects for annotation purposes/ as a content awareness program.
